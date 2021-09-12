@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use CodeIgniter\API\ResponseTrait;
-use CodeIgniter\Database\ConnectionInterface;
 
 class Cidadao extends BaseController
 {

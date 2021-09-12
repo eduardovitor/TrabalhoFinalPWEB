@@ -75,8 +75,8 @@
       </p>
       <br>
       <p>
-        <button class="w3-btn" onclick="">Já tenho conta</button>
-        <button class="w3-btn w3-blue w3-right" type="submit">Cadastrar</button>
+        <a class="w3-btn" href="http://localhost:8080/login">Já tenho conta</a>
+        <button class="w3-btn w3-blue w3-right" type="submit">Cadastrar</a>
       </p>
     </form>
     </body>
