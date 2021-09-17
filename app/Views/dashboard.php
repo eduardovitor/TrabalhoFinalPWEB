@@ -45,5 +45,14 @@
             <a href="/dashboard" class="w3-bar-item w3-button w3-padding-large">Dashboard</a>
         </div>
     </div>
+    <?php
+	    $json = file_get_contents("http://transparencia.al.gov.br/despesa/json-despesa-favorecido/?data_registro_dti_=01/01/2020&data_registro_dtf_=31/12/2020&limit=15&offset=0&sort=total_pago&order=asc");
+	    $obj = json_decode($json);
+	    $ob = get_object_vars($obj);
+	    var_dump($ob['rows']);
+	    echo "<br>";
+	    $detalhe=get_object_vars($ob['detalhe']);
+	    echo $detalhe['valor_liquidado__sum'];
+    ?>
     </body>
 </html>
