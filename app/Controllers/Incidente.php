@@ -65,4 +65,14 @@ class Incidente extends BaseController
             echo "Não há incidentes cadastrados!";
         }
     }
+
+    public function marcarIncidente(){
+        $dados = $this->request->getPost();
+        $incidente_model = new \App\Models\IncidenteModel();
+        $data = [
+            'username' => 'darth',
+            'email'    => 'd.vader@theempire.com',
+        ];
+        $incidente_model->update($id, $data);
+    }
 }
