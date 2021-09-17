@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+use CodeIgniter\API\ResponseTrait;
+use CodeIgniter\Database\ConnectionInterface;
 
 class Incidente extends BaseController
 {
@@ -11,7 +13,7 @@ class Incidente extends BaseController
         return view('incidente');
     }
     
-    public function cadastrarIncidente()
+    public function cadastrarincidente()
     {
         $incidente_model = new \App\Models\IncidenteModel();
         $incidente =$incidente_model->save($this->request->getPost());

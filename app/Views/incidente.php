@@ -49,7 +49,7 @@
     <br>
     <br>
     <br>
-    <form class="w3-container w3-card-4" action="http://localhost:8080/incidente/cadastrarIncidente" method="POST">
+<!--  <form class="w3-container w3-card-4" action="http://localhost:8080/incidente/cadastrarincidente" method="POST">
       <h2 class="w3-text-blue">Formulário de cadastro</h2>
       <p>      
           <label class="w3-text-blue"><b>Tipo: </b></label>
@@ -77,9 +77,9 @@
       </p>
       <br>
       <p>
-        <button class="w3-btn" onclick="">Visualizar incidentes por tipo</button>
+        <button class="w3-btn" onclick="http://localhost:8080/incidente/visualizarPorTipo">Visualizar incidentes por tipo</button>
         <button class="w3-btn w3-blue w3-right" type="submit">Cadastrar</button>
       </p>
-    </form>
+    </form>-->
     </body>
 </html>
