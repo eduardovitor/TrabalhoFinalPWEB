@@ -49,7 +49,7 @@
     <br>
     <br>
     <br>
-    <form class="w3-container w3-card-4" action="http://localhost:8080/cidadao/cadastrarIncidente" method="POST">
+    <form class="w3-container w3-card-4" action="http://localhost:8080/incidente/cadastrarIncidente" method="POST">
       <h2 class="w3-text-blue">Formulário de cadastro</h2>
       <p>      
           <label class="w3-text-blue"><b>Tipo: </b></label>
