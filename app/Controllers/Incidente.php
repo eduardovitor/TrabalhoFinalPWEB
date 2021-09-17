@@ -11,7 +11,7 @@ class Incidente extends BaseController
         return view('incidente');
     }
     
-    public function cadastrar()
+    public function cadastrarIncidente()
     {
         $incidente_model = new \App\Models\IncidenteModel();
         $incidente =$incidente_model->save($this->request->getPost());
@@ -66,7 +66,7 @@ class Incidente extends BaseController
         }
     }
 
-    public function marcarIncidente(){
+    /*public function marcarIncidente(){
         $dados = $this->request->getPost();
         $incidente_model = new \App\Models\IncidenteModel();
         $data = [
@@ -74,5 +74,5 @@ class Incidente extends BaseController
             'email'    => 'd.vader@theempire.com',
         ];
         $incidente_model->update($id, $data);
-    }
+    }*/
 }
