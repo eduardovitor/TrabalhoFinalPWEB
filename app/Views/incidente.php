@@ -49,7 +49,7 @@
     <br>
     <br>
     <br>
-<!--  <form class="w3-container w3-card-4" action="http://localhost:8080/incidente/cadastrarincidente" method="POST">
+   <form class="w3-container w3-card-4" action="http://localhost:8080/incidente/cadastrarincidente" method="POST">
       <h2 class="w3-text-blue">Formulário de cadastro</h2>
       <p>      
           <label class="w3-text-blue"><b>Tipo: </b></label>
@@ -68,8 +68,8 @@
           <input class="w3-input w3-border" name="data_cadastro" type="text">
       </p>
       <p>      
-          <label class="w3-text-blue"><b>Foto: </b></label>
-          <input class="w3-input w3-border" name="path_foto" type="file">
+          <label class="w3-text-blue"><b>Link da foto: </b></label>
+          <input class="w3-input w3-border" name="path_foto" type="text">
       </p>
       <p>      
           <label class="w3-text-blue"><b>Marcar condição:</b></label>
@@ -77,9 +77,11 @@
       </p>
       <br>
       <p>
-        <button class="w3-btn" onclick="http://localhost:8080/incidente/visualizarPorTipo">Visualizar incidentes por tipo</button>
+        <a class="w3-btn" href="http://localhost:8080/incidente/visualizarportipo">Visualizar incidentes por tipo</a>
+        <a class="w3-btn" href="http://localhost:8080/incidente/visualizarporlocalizacao">Visualizar incidentes por localização</a>
+        <a class="w3-btn" href="http://localhost:8080/incidente/visualizarpordata">Visualizar incidentes por data de cadastro</a>
         <button class="w3-btn w3-blue w3-right" type="submit">Cadastrar</button>
       </p>
-    </form>-->
+    </form>
     </body>
 </html>

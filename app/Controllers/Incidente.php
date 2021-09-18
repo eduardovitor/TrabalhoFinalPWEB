@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Controllers;
+
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\Database\ConnectionInterface;
+use CodeIgniter\Database\Query;
 
 class Incidente extends BaseController
 {
@@ -20,55 +22,55 @@ class Incidente extends BaseController
         return view('home');
     }
 
-    public function visualizarPorTipo()
+    public function visualizarportipo()
     {
         $db = \Config\Database::connect();
-        $sql = "SELECT * FROM incidente ORDER BY tipo";
-        $resultado = $db->query($sql);
-        $linhas_afetadas = $resultado->getNumRows()
-        if($linhas_afetadas > 0){
-            while($row = $resultado->fetch_assoc()){
-                echo "ID: " . $row["id"] . "Tipo: " . $row["tipo"] . "Nome: " . $row["nome"] . "Localização: " . $row["localizacao"] . "Data de cadastro: " . $row["data_cadastro"] . "Foto: " . $row["path_foto"] . "Condição do incidente: " . $row["condicao_incidente"] . "<br>";
-            }
+        $sql = $db->query('SELECT * FROM incidente ORDER BY tipo');
+        $resultado = $sql->getResult();
+        foreach($resultado as $linha){
+            echo $linha->tipo . "<br>";
+            echo $linha->nome . "<br>";
+            echo $linha->localizacao . "<br>";
+            echo $linha->data_cadastro . "<br>";
+            echo $linha->path_foto . "<br>";
+            echo $linha->condicao_incidente . "<br>";
         }
-        else{
-            echo "Não há incidentes cadastrados!";
-        }
+        echo 'Total de Incidentes: ' . count($resultado);
     }
 
-    public function visualizarPorLocalizacao()
+    public function visualizarporlocalizacao()
     {
         $db = \Config\Database::connect();
-        $sql = "SELECT * FROM incidente ORDER BY localizacao";
-        $resultado = $db->query($sql);
-        $linhas_afetadas = $resultado->getNumRows()
-        if($linhas_afetadas > 0){
-            while($row = $resultado->fetch_assoc()){
-                echo "ID: " . $row["id"] . "Tipo: " . $row["tipo"] . "Nome: " . $row["nome"] . "Localização: " . $row["localizacao"] . "Data de cadastro: " . $row["data_cadastro"] . "Foto: " . $row["path_foto"] . "Condição do incidente: " . $row["condicao_incidente"] . "<br>";
-            }
+        $sql = $db->query('SELECT * FROM incidente ORDER BY localizacao');
+        $resultado = $sql->getResult();
+        foreach($resultado as $linha){
+            echo $linha->tipo . "<br>";
+            echo $linha->nome . "<br>";
+            echo $linha->localizacao . "<br>";
+            echo $linha->data_cadastro . "<br>";
+            echo $linha->path_foto . "<br>";
+            echo $linha->condicao_incidente . "<br>";
         }
-        else{
-            echo "Não há incidentes cadastrados!";
-        }
+        echo 'Total de Incidentes: ' . count($resultado);
     }
 
-    public function visualizarPorData()
+    public function visualizarpordata()
     {
         $db = \Config\Database::connect();
-        $sql = "SELECT * FROM incidente ORDER BY data_cadastro";
-        $resultado = $db->query($sql);
-        $linhas_afetadas = $resultado->getNumRows()
-        if($linhas_afetadas > 0){
-            while($row = $resultado->fetch_assoc()){
-                echo "ID: " . $row["id"] . "Tipo: " . $row["tipo"] . "Nome: " . $row["nome"] . "Localização: " . $row["localizacao"] . "Data de cadastro: " . $row["data_cadastro"] . "Foto: " . $row["path_foto"] . "Condição do incidente: " . $row["condicao_incidente"] . "<br>";
-            }
+        $sql = $db->query('SELECT * FROM incidente ORDER BY data_cadastro');
+        $resultado = $sql->getResult();
+        foreach($resultado as $linha){
+            echo $linha->tipo . "/ ";
+            echo $linha->nome . "/ ";
+            echo $linha->localizacao . "/ ";
+            echo $linha->data_cadastro . "/ ";
+            echo $linha->path_foto . "/ ";
+            echo $linha->condicao_incidente . "<br><br>";
         }
-        else{
-            echo "Não há incidentes cadastrados!";
-        }
+        echo 'Total de Incidentes: ' . count($resultado);
     }
 
-    /*public function marcarIncidente(){
+    /*public function marcarincidente(){
         $dados = $this->request->getPost();
         $incidente_model = new \App\Models\IncidenteModel();
         $data = [
