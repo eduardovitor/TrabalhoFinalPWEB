@@ -45,5 +45,43 @@
             <a href="/dashboard" class="w3-bar-item w3-button w3-padding-large">Dashboard</a>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+   <form class="w3-container w3-card-4" action="http://localhost:8080/incidente/cadastrarincidente" method="POST">
+      <h2 class="w3-text-blue">Formulário de cadastro</h2>
+      <p>      
+          <label class="w3-text-blue"><b>Tipo: </b></label>
+          <input class="w3-input w3-border" name="tipo" type="text">
+      </p>
+      <p>      
+          <label class="w3-text-blue"><b>Nome:</b></label>
+          <input class="w3-input w3-border" name="nome" type="text">
+      </p>
+      <p>      
+          <label class="w3-text-blue"><b>Localização: </b></label>
+          <input class="w3-input w3-border" name="localizacao" type="text">
+      </p>
+      <p>      
+          <label class="w3-text-blue"><b>Data de cadastro: </b></label>
+          <input class="w3-input w3-border" name="data_cadastro" type="text">
+      </p>
+      <p>      
+          <label class="w3-text-blue"><b>Link da foto: </b></label>
+          <input class="w3-input w3-border" name="path_foto" type="text">
+      </p>
+      <p>      
+          <label class="w3-text-blue"><b>Marcar condição:</b></label>
+          <input class="w3-input w3-border" name="condicao_incidente" type="text">
+      </p>
+      <br>
+      <p>
+        <a class="w3-btn" href="http://localhost:8080/incidente/visualizarportipo">Visualizar incidentes por tipo</a>
+        <a class="w3-btn" href="http://localhost:8080/incidente/visualizarporlocalizacao">Visualizar incidentes por localização</a>
+        <a class="w3-btn" href="http://localhost:8080/incidente/visualizarpordata">Visualizar incidentes por data de cadastro</a>
+        <button class="w3-btn w3-blue w3-right" type="submit">Cadastrar</button>
+      </p>
+    </form>
     </body>
 </html>

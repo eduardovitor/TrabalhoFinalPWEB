@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => '127.0.0.1',
         'username' => 'root',
         'password' => '',
-        'database' => 'gestor_incidentes',
+        'database' => 'gestor_incidente',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
